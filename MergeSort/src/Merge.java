@@ -19,6 +19,7 @@ public class Merge {
 			index++;
 			size++;
 		}else {
+			System.out.println();
 			System.out.println("Sorry, there are too many integers in the array.");
 			System.out.println();
 		}
@@ -36,7 +37,7 @@ public class Merge {
 		//sort using merge
 		this.sort(arr, 0, size-1);
 		
-		//print statement to show short
+		//print statement to show sorted array
 		System.out.println("Here is what your sorted array looks like: ");
 		for (int i=0; i<size; i++) {
 			System.out.println(i + ": " + arr[i]);
@@ -132,7 +133,7 @@ public class Merge {
 		
 	}
 	
-	//does recursive binary, returns index of int to be found
+	//does recursive binary, sets foundIndex to index at inputed number or -1 if not in array
 	private void binRecurSearch(int n, int start, int end, int midIndex) {
 		
 		//base case
@@ -164,7 +165,7 @@ public class Merge {
 			}else if (n > arr[midIndex]) {
 				start = midIndex + 1;
 				midIndex = (((midIndex+1) + end) / 2); 
-				
+				//replaced midIndex+1 with start
 				binRecurSearch(n, start, end, midIndex);
 			
 			}else {

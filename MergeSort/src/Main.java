@@ -9,7 +9,7 @@ public class Main {
 		boolean runAgain=true;
 		
 		try {
-			//start by adding integers to array
+			//start by adding one integer to the array
 			System.out.println("Please add one number to the array: ");
 			num = scn.nextInt();
 			mer.addArray(num);
@@ -28,7 +28,7 @@ public class Main {
 				scn = new Scanner(System.in);
 				System.out.println("What would you like to do? Please enter: "
 						+ "\n1 to search for a specific number. "
-						+ "\n2 to add a number to the array (please enter no more than 10). "
+						+ "\n2 to add a number to the array (please add no more than 10). "
 						+ "\n3 to end program.");
 				userInput = scn.nextInt();
 				
